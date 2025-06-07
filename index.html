@@ -1,42 +1,46 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masolite Great</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>MASOLITES ECOMAS</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>MASOLITE GREAT</h1>
-        <div class="card">
-            <h2>Welcome Message</h2>
-            <p>Welcome to Economic Community Of Masolites (ECOMAS) Platform where aside Platform products and services you can also add yours, buy & sell at highest discounts to fellow Masolites for a better society.</p>
+    <header>
+        <h1>MASOLITES ECOMAS</h1>
+        <div class="tagline">
+            Welcome! Masolites. ECOMAS means Economic Community Of Masolites. It's a Product & Service Discount Platform Powered by It's own MAZOL (MZLx) Crypto Tokens & offers Trusted Products & Services at favourable prices to Masolites. Masolites can also Buy/Sell. New users can mine free but Upgrade your Membership to Mine More MAZOL Tokens, Get Higher Discounts & Sell own Products, & have voting powers to determine Daily & Final LAUNCH Price of MAZOL (MZLx) Tokens soon.
         </div>
-        <div class="card">
-            <h2>Private Sale Ends In</h2>
-            <div class="countdown">
-                <div class="countdown-item">
-                    <span id="days">120</span>
-                    <p>Days</p>
-                </div>
-                <div class="countdown-item">
-                    <span id="hours">00</span>
-                    <p>Hours</p>
-                </div>
-                <div class="countdown-item">
-                    <span id="minutes">00</span>
-                    <p>Minutes</p>
-                </div>
-            </div>
+    </header>
+    <div class="countdown-section">
+        <div class="section-title">MAZOL Private Sale Only</div>
+        <div class="countdown-timer" id="icoTimer">00:00:00.000</div>
+        <div class="countdown-label">Rate: 0.001 USD/MZLx</div>
+        <div class="countdown-label">Totalizer: <span id="icoTotalizer">0</span> MZLx</div>
+        <button class="btn btn-primary" id="buyBtn">BUY</button>
+    </div>
+    <div class="mining-section">
+        <div class="mining-header">
+            <div class="mining-title">MAZOL Mining Portal</div>
+            <div class="mining-status status-inactive">INACTIVE</div>
         </div>
-        <div class="card">
-            <h2>Mining Counter</h2>
-            <p id="minedAmount">0.000000 MZLx</p>
-            <button id="miningButton">Start Mining</button>
+        <div class="mining-timer" id="miningTimer">24:00:00.000</div>
+        <div class="mining-total">Total Mined: <span id="totalMined">0</span> MZLx</div>
+        <button class="btn btn-mining" id="miningBtn">START MINING</button>
+        <div class="toggle-switch">
+            <label class="switch">
+                <input type="checkbox" id="miningToggle">
+                <span class="slider round"></span>
+            </label>
         </div>
     </div>
-
-    <script src="script.js"></script>
+    <div class="bottom-section">
+        <button class="btn btn-secondary">Swap</button>
+        <button class="btn btn-secondary">Link Wallet</button>
+        <button class="btn btn-secondary">Save & Earn</button>
+        <button class="btn btn-secondary">Escrow</button>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
