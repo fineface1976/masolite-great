@@ -1,27 +1,17 @@
- :root {
-    --deep-blue: #001F3F;
-    --light-blue: #ADD8E6;
-}
-
-body {
-    background-color: var(--deep-blue);
-    color: var(--light-blue);
+ body {
+    background-color: #001F3F;
+    color: #ADD8E6;
     font-family: Arial, sans-serif;
     padding: 20px;
 }
 
 header {
-    background: linear-gradient(135deg, var(--deep-blue), #003366);
+    background-color: #002244;
     padding: 20px;
-    text-align: center;
     border: 1px solid #fff;
     border-radius: 10px;
     margin-bottom: 20px;
-}
-
-.tagline {
-    font-size: 16px;
-    margin-top: 10px;
+    text-align: center;
 }
 
 .countdown-section {
@@ -33,11 +23,6 @@ header {
     text-align: center;
 }
 
-.countdown-timer {
-    font-size: 36px;
-    font-weight: bold;
-}
-
 .mining-section {
     background-color: #002244;
     padding: 20px;
@@ -45,30 +30,6 @@ header {
     border-radius: 10px;
     margin-bottom: 20px;
     text-align: center;
-}
-
-.mining-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.mining-status {
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.status-active {
-    background-color: #00FF00;
-    color: #000;
-}
-
-.status-inactive {
-    background-color: #FF0000;
-    color: #FFF;
 }
 
 .bottom-section {
@@ -89,6 +50,16 @@ header {
     color: #fff;
 }
 
-.btn:hover {
-    background-color: #005599;
+.status-active {
+    background-color: #00FF00;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.status-inactive {
+    background-color: #FF0000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
 }
