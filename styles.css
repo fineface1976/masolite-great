@@ -1,0 +1,87 @@
+:root {
+    --deep-blue: #0a2463;
+    --navy: #1a1a2e;
+    --light-blue: #3e92cc;
+    --lemon-green: #a4de02;
+    --accent: #d8315b;
+    --card-bg: rgba(0, 0, 0, 0.5);
+    --text-light: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+}
+
+.app-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.top-section {
+    flex: 0 0 70%;
+    overflow: hidden;
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.countdown-item {
+    background: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    padding: 8px 5px;
+    min-width: 60px;
+    text-align: center;
+    border: 1px solid var(--accent);
+}
+
+.countdown-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(to bottom, #fff, #ccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.countdown-label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
+.action-grid {
+    flex: 0 0 30%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 10px;
+}
+
+.action-card
