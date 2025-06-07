@@ -33,9 +33,9 @@ function updateMiningTimer() {
 document.getElementById('miningBtn').addEventListener('click', () => {
     if (!isMining) {
         isMining = true;
-        document.querySelector('.mining-status').textContent = 'ACTIVE';
-        document.querySelector('.mining-status').classList.remove('status-inactive');
-        document.querySelector('.mining-status').classList.add('status-active');
+        document.getElementById('miningStatus').textContent = 'ACTIVE';
+        document.getElementById('miningStatus').classList.remove('status-inactive');
+        document.getElementById('miningStatus').classList.add('status-active');
         miningInterval = setInterval(() => {
             miningMilliseconds -= 10;
             if (miningMilliseconds < 0) {
@@ -51,24 +51,22 @@ document.getElementById('miningBtn').addEventListener('click', () => {
                 miningHours--;
             }
             if (miningHours < 0) {
-                // Mining timer has ended
                 clearInterval(miningInterval);
                 isMining = false;
-                document.querySelector('.mining-status').textContent = 'INACTIVE';
-                document.querySelector('.mining-status').classList.remove('status-active');
-                document.querySelector('.mining-status').classList.add('status-inactive');
+                document.getElementById('miningStatus').textContent = 'INACTIVE';
+                document.getElementById('miningStatus').classList.remove('status-active');
+                document.getElementById('miningStatus').classList.add('status-inactive');
             }
             updateMiningTimer();
-            // Update total mined amount
             const totalMined = parseFloat(document.getElementById('totalMined').textContent);
             document.getElementById('totalMined').textContent = (totalMined + 0.001).toFixed(3);
         }, 10);
     } else {
         clearInterval(miningInterval);
         isMining = false;
-        document.querySelector('.mining-status').textContent = 'INACTIVE';
-        document.querySelector('.mining-status').classList.remove('status-active');
-        document.querySelector('.mining-status').classList.add('status-inactive');
+        document.getElementById('miningStatus').textContent = 'INACTIVE';
+        document.getElementById('miningStatus').classList.remove('status-active');
+        document.getElementById('miningStatus').classList.add('status-inactive');
     }
 });
 
